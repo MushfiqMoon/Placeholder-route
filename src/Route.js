@@ -6,6 +6,7 @@ import AllPost from './components/AllPost';
 import PostDetails from './components/PostDetails';
 import PageNotFound from './components/PageNotFound';
 import User from './components/User';
+import AllUsers from "./components/AllUsers";
 
 export const router = createBrowserRouter([
     {
@@ -32,6 +33,11 @@ export const router = createBrowserRouter([
                 return fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`);
             },
             element: <User />,
+        },
+        {
+            path: "all-users",
+            loader: async () => fetch(`https://jsonplaceholder.typicode.com/users`),
+            element: <AllUsers />,
         },
         ]
     },

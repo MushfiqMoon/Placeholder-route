@@ -11,7 +11,7 @@ const User = () => {
   return (
     <div className="container mx-auto px-4">
 
-      <div className="card lg:card-side bg-base-100 shadow-xl">
+      <div className="card lg:card-side bg-base-100 shadow-xl border ">
         <figure><img src={`https://i.pravatar.cc/300?u=${id}`} alt={name} /></figure>
         <div className="card-body">
           <h2 className="card-title mb-5 text-primary">{name}</h2>
